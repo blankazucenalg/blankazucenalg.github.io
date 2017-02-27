@@ -1,13 +1,109 @@
-div
-  md-content
-    header
-      acme-navbar(creation-date='main.creationDate')
-    section.container
-      h2 Hi, this is me
-      md-card
-        md-header
-          p Blanca Azucena Lopez
-        md-content
-          p Full Stack & Data Viz Developer @ DATA4
-    footer
-      acme-footer
+#menu.col.hide-on-small-only.m3.l2.left
+  ul.section.table-of-contents
+    li
+      a(href="#about") Who am I?
+    //-li
+      a(href="#projects") Projects
+    li
+      a(href="#contact") Contact
+.parallax-container.valign-wrapper
+  .container.valign
+    .row
+      .col.s12
+      h2.center.light Hi, I'm Blanca Azucena
+  .parallax
+    img(src="http://www.planwallpaper.com/static/images/cool-background.jpg" alt="Unsplashed background img 1")
+
+.container
+  #about.section.scrollspy
+    .row
+      .col.s12.m12.l12
+        .card-panel.hoverable.small
+          .card-content
+            .row
+              .col.s12.m6.l4
+                .card-image
+                  img.img-responsive(src="assets/images/profile.jpg")
+              .col.s12.m6.l8
+                h4.card-title Who am I?
+                p Name: &nbsp;
+                  span#fullname.typewriter
+                p I was born on: &nbsp;
+                  span#birthdate.typewriter
+                p I live in: &nbsp;
+                  span#place.typewriter
+                p I studied: &nbsp;
+                  span#studies.typewriter
+                p Bio: &nbsp;
+                  span#bio.typewriter
+                p Skills: &nbsp;
+                  span#skills.typewriter
+  .section.scrollspy
+    .row
+      .col.s12.m12.l12.center-align
+        p This site is sill on development. Wait for it!
+
+
+//-.parallax-container.valign-wrapper
+  .container.valign
+    .row.center
+      h5.header.col.s12.light Aprenderás estadística básica, R, Javascript y D3.js
+  .parallax
+    img(src="../../assets/images/background2.jpg" alt="Unsplashed background img 2")
+
+//-.container
+  .section
+    .row
+      .col.s12.center
+        h3
+          i.mdi-content-send.brown-text
+        h4 Temario
+        p.left-align.light
+          br
+          | Sesión 1: Introducción a estadística básica.
+          br
+          | Sesión 2: ¿Cómo obtenemos datos? Fuentes, introducción a R, y limpiar datos.
+          br
+          | Sesión 3: Conocer los datos: descriptivos y gráficos básicos.
+          br
+          | Sesión 4: Geográficos: shapefiles, mapas no interactivos, cálculos geográficos.
+          br
+          | Sesión 5: Algoritmos de clasificación categórica de texto.
+          br
+          | Sesión 6: Algoritmos de asignación de ranking de texto.
+          br
+          | Sesión 7: Regresiones lineales: predecir un set de datos con base a otro set de datos.
+          br
+          | Sesión 8: Regresiones no-lineales: predecir un set de datos con base a otro set de datos cuando la relación entre ellos no es una línea recta.
+          br
+          | Sesión 9: Introducción a Javascript.
+          br
+          | Sesión 10: Continuación a Introducción a Javascript.
+          br
+          | Sesión 11: Introducción a D3.js
+          br
+          | Sesión 12: Creación de gráficas reutilizables en D3.js
+          br
+          | Sesión 13: Generación de mapas con D3.js
+          br
+          | Sesión 14: Interacción con eventos de usuario y eventos personalizados.
+          br
+          | Sesión 15: Comunicación entre múltiples gráficas.
+          br
+          | Sesión 16: Generación de un dashboard interactivo.
+
+//-.parallax-container.valign-wrapper
+  .container.valign
+    .row
+      .col.s12
+        h2.center dev.f
+    .row
+      .col.s12.light.center
+        p Forma parte del movimiento hacker más grande de América Latina.
+    .row
+      .col.s12.center
+        a(ui-sref="signin").btn-large.waves-effect.waves-light Regístrate
+  .parallax
+    img(src="../../assets/images/background3.jpg" alt="Unsplashed background img 3")
+
+acme-footer#contact.scrollspy

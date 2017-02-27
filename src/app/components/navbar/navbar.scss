@@ -1,11 +1,10 @@
-.acme-navbar-text{
-  color: white;
-}
-
 nav .brand-logo {
-  font-size: 1.7rem;
-}
-
-nav {
-  background-color: $main_color;
+  img {
+    margin: 8px 10px 0 0;
+    float: left;
+    width: 15%;
+  }
+  span {
+    font-weight: 200;
+  }
 }

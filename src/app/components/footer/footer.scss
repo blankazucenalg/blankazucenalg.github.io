@@ -1,3 +1,7 @@
 footer.page-footer {
-  background-color: $main_color;
+  background-color: $main_dark_color;
+  color: $main_dark_text_color;
+  a {
+    color: $main_dark_link_color;
+  }
 }

@@ -1,4 +1,9 @@
 node_modules/
 bower_components/
+
 dist/
 .tmp/
+
+coverage/
+.sass-cache/
+.idea/

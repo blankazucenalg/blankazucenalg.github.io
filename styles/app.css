@@ -38,3 +38,7 @@ html, body, .block {
 .rounded-img {
   border-radius: 50%;
 }
+
+.event {
+  fill: #8c2a3a;
+}

@@ -30,25 +30,26 @@
           console.log(gitlab[i])
           data.push(gitlab[i]);
         }
-        console.log(data);
         data.forEach(function(d) {
-          d.created_at = moment(d.created_at);
+          d.created_at = moment(d.created_at).local()._d;
         });
+        console.log(data);
+
         data.sort(function(a,b) {
           return b.created_at - a.created_at;
         })
 
         var nestedData = d3.nest()
-          .key(function(d){ return moment(d.created_at).format('Y/MM/D') })
+          .key(function(d){ return moment(d.created_at).local().format('Y/MM/D');})
           .entries(data);
 
         console.log(nestedData);
 
-        var today = moment();
-        var first = moment(data[data.length - 1].created_at);
+        var today = moment()._d;
+        var first = moment(data[data.length - 1].created_at).local()._d;
 
-        d3.select('#first-date').text(moment(first).format('YYYY/MM/DD'));
-        d3.select('#today-date').text(moment(today).format('YYYY/MM/DD'));
+        d3.select('#first-date').text(moment(first).local().format('YYYY/MM/DD'));
+        d3.select('#today-date').text(moment(today).local().format('YYYY/MM/DD'));
 
         var daysDiff = Math.round((today-first)/(1000*60*60*24));
         var width = $(container.node()).width();
@@ -56,8 +57,8 @@
         var size = width / daysDiff;
 
         var scale = d3.scaleLinear()
-          .range([0, width - size])
-          .domain([first, today]);
+          .range([0, width])
+          .domain([moment(first).subtract(1, 'day').local()._d, moment(today).local()._d]);
 
         var svg = container.append('svg')
           .attr('width', width)
@@ -70,7 +71,7 @@
           d.values.forEach(function(o){
             html += ''; //<span>' + (o.type || o.action_name) + '</span><br>'
           })
-          html += '<span>' + moment(d.created_at).format('DD/MM/YYYY') + '</span>';
+          html += '<span>' + moment(d.key).format('ll') + '</span>';
           return html;
         });
 
@@ -81,10 +82,10 @@
           .attr('x', 0)
           .attr('y', 0)
           .attr('width', width)
-          .attr('height', size);
+          .attr('height', height);
 
         var nested = d3.nest()
-          .key(function(d) { return moment.tz(d.created_at, 'America/Mexico_City').format('YYYY/MM/DD'); })
+          .key(function(d) { return moment(d.created_at).local().format('Y/MM/DD'); })
           .entries(data);
 
         var eventsQuantity = d3.extent(nested, function(leave) { return leave.values.length; });
@@ -114,7 +115,7 @@
               selection.enter()
                 .append('p')
                 .attr('class', 'eventDay')
-                .text(function(o){ return JSON.stringify(o); })
+                .text(function(o){ return JSON.stringify({id: o.id, created_at: o.created_at, project: (o.data ? o.data.project.name : o.repo.name), url: (o.data ? o.data.project.url : o.repo.url)}); })
 
             })
         }

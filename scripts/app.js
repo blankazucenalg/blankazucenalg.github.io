@@ -18,7 +18,7 @@
       $.ajax({
         type: "GET",
         beforeSend: function(request) {
-          request.setRequestHeader("PRIVATE-TOKEN", '5TNYhcMkdkBn7RAh3qPK');
+          request.setRequestHeader("PRIVATE-TOKEN", '');
         },
         url: "https://gitlab.com/api/v4/users/blankazucenalg/events",
         success: function(gitlab) {

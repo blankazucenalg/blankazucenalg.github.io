@@ -1,119 +1,54 @@
-<!doctype html>
-<html ng-app=blankazucenalgGithubIo>
-  <head>
-    <title>Blanca Azucena López Garduño</title>
-    <!-- metadata -->
-    <meta charset=utf-8>
-    <meta name=description content="">
-    <meta name=viewport content="width=device-width">
-
-    <!-- fonts -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel=stylesheet>
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+--- 
+layout: default 
+title: Blanca Azucena López Garduño
+---
+<div class="profile center-align">
+  <div class="avatar-image"></div>
+  <div class="profile-title">Blanca Azucena López Garduño</div>
+  <div class="profile-subtitle">CS Engineer. Software developer. I like music, drawing, cooking and making DIY stuff. I don't like horror movies</div>
+  
+  <ul class="networks">
+    <li class="service email">
+      <a class="icon bP" href="mailto:hello@blankazucenalg.com" target="_blank" title="Email">
+        <span class="fa fa-envelope-o"></span>
+      </a>
+    </li>    
+    <li class="service github">
+      <a class="icon bP" href="https://github.com/blankazucenalg" target="_blank" title="github">
+        <span class="fa fa-github"></span>
+      </a>
+    </li>
+    <li class="service twitter">
+      <a class="icon bP" href="https://twitter.com/blankazucenalg" target="_blank" title="Twitter">
+        <span class="fa fa-twitter"></span>
+      </a>
+    </li>
+    <li class="service lastfm">
+      <a class="icon bP" href="https://www.last.fm/es/user/blankazucenalg" target="_blank" title="Lastfm">
+        <span class="fa fa-lastfm"></span>
+      </a>
+    </li>
+    <li class="service linkedin">
+      <a class="icon bP" href="https://www.linkedin.com/in/blankazucenalg/" target="_blank" title="linkedin">
+        <span class="fa fa-linkedin"></span>
+      </a>
+    </li>
     
-    <!-- CSS library dependencies -->
-    <link rel=stylesheet href="assets/js/font-awesome-4.7.0/css/font-awesome.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+  </ul>
+  
+</div>
+<div class="posts">
 
-    <!-- styles -->
-    <link rel=stylesheet href=styles/app.css>
-  </head>
-  <body>
-    <!--[if lt IE 10]>
-    <p class="browsehappy">You are using an
-      <strong>outdated
-      </strong> browser. Please
-      <a href="http://browsehappy.com/">upgrade your browser
-      </a> to improve your experience.
-    </p>
-    <![endif]-->
-    
-    <!-- Content -->
-    <nav class="navbar pinned" data-target="blue" style="top: 0px;">
-      <div class="nav-wrapper">
-        <div class="container">
-          <a href="#" class="brand-logo">Blanca Azucena López Garduño</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li>
-              <a href="http://github.com/blankazucenalg" target="_blank">
-                <i class="fa fa-github" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://twitter.com/blankazucenalg" target="_blank">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-              </a>
-            </li>
-            <!--li>
-              <a href="https://linkedin.com/in/blankazucenalg" target="_blank">
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
-              </a>
-            </li-->
-            <li>
-              <a href="mailto:blankazucenalg@gmail.com" target="_blank">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://medium.com/@blankazucenalg" target="_blank">
-                <i class="fa fa-medium" aria-hidden="true"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <div class="parallax-container">
-      <div class="parallax"><img src="assets/images/parallax1.jpg"></div>
+  {% for post in site.posts %}
+  <div class="post">
+    <a href="{{ post.url }}" title="{{ post.title }}">
+      <h2>{{ post.title }}</h2>
+    </a>
+    <span>{{ post.date | date_to_string }}</span>
+    <div>
+      {{ post.content }}
     </div>
-    <div class="section white">
-      <div class="row container">
-        <div class="col s8">
-          <h3 class="header">Hey there!</h3>
-          <p class="grey-text text-darken-3 lighten-3">Hi! I'm Blanca. I'm a Computer Science Engineer with interest on web development and data managment systems. I'm from Mexico City, I studied at Instituto Politécnico Nacional.</p>
-        </div>
-        <div class="col s4">
-          <div class="profile">
-            <img src="/assets/images/profile.jpg" class="responsive-img rounded-img">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="parallax-container">
-      <div class="parallax"><img src="assets/images/parallax2.jpg"></div>
-    </div>
-    <div class="section white">
-      <div class="row container">
-        <div class="col s12" id="content-code">
-          <p>I write code publicly at 
-            <a href="http://github.com/blankazucenalg" target="_blank">Github</a>
-            (and privately at 
-            <a href="http://gitlab.com/blankazucenalg" target="_blank">Gitlab</a>)
-          </p>
-          <div id="github-viz"></div>
-          <div class="row">
-            <div class="col s6 left-align" id="first-date"></div>
-            <div class="col s6 right-align" id="today-date"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="parallax-container">
-      <div class="parallax"><img src="assets/images/parallax1.jpg"></div>
-    </div>
-    <!-- end content -->
-
-    <!-- JS dependencies -->
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.10.0/d3.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.13/moment-timezone.js"></script>
-
-    <!-- JavaScript code -->
-    <script src=scripts/app.js></script>
-  </body>
-</html>
+  </div>
+  {% endfor %}
+</div>
+<!-- /.blurb -->

@@ -7,3 +7,6 @@ dist/
 coverage/
 .sass-cache/
 .idea/
+
+
+_site/

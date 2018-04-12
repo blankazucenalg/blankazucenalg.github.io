@@ -1,0 +1,151 @@
+html {
+  background-color: #fefefe;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body>.container {
+  min-height: 90vh;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+a {
+  color: midnightblue;
+
+}
+
+.navbar {
+  z-index: 9;
+}
+
+.navbar li a {
+  font-size: 1.5rem;
+}
+
+.brand-logo {
+  font-family: Lobster;
+}
+
+html,
+body,
+.block {
+  height: 100%;
+}
+
+.pin-top {
+  position: relative;
+}
+
+.pin-bottom {
+  position: relative;
+}
+
+.pinned {
+  position: fixed !important;
+}
+
+.rounded-img {
+  border-radius: 50%;
+}
+
+.event {
+  fill: #8c2a3a;
+}
+
+.container {
+  max-width: 800px;
+}
+
+.profile {
+  margin-top: 3em;
+}
+
+.avatar-image {
+  height: 10em;
+  width: 10em;
+  border-radius: 50%;
+  background-image: url('https://avatars3.githubusercontent.com/u/6007352?s=460&v=4');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(90);
+  display: inline-block;
+  position: relative;
+}
+
+.avatar-image:hover {
+  filter: unset;
+}
+
+.profile-title {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.7em;
+  color: #666;
+}
+
+.profile-subtitle {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1em;
+  color: #666;
+  max-width: 500px;
+  margin: auto;
+}
+
+.networks {
+  list-style-type: none;
+  margin-top: 0px;
+}
+
+.networks .service {
+  display: inline-block;
+  margin: .15em;
+  font-size: 1.5em;
+}
+
+.networks .service a.icon {
+  color: #666;
+}
+
+.networks .service a.icon:hover {
+  color: midnightblue;
+}
+
+footer {
+  margin-top: 2em;
+}
+
+footer p {
+  font-size: 1em;
+}
+
+p.meta {
+  font-size: 1.1em;
+  color: #555;
+}
+
+
+h1, h2 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.post h1 {
+  color: #666;
+}
+.post p {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+img {
+  margin: auto;
+  width: 110%;
+  height: auto;
+  max-width: 90vw;
+}
+
+@media(min-width: 590px) {
+  img {
+    margin-left: -5%;
+  }
+}

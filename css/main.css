@@ -99,10 +99,12 @@ a:hover {
 
 .networks .service a.icon {
   color: #666;
+  transition: all .3s;
 }
 
 .networks .service a.icon:hover {
   color: midnightblue;
+  font-size: 1.1em;
 }
 
 footer {

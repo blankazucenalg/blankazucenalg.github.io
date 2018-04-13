@@ -3,9 +3,9 @@ html {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-body > .container {
+body>.container {
   margin-top: 4em;
-  min-height: 90vh;
+  min-height: 82vh;
 }
 
 p {
@@ -14,7 +14,9 @@ p {
 
 a {
   color: midnightblue;
-
+}
+a:hover {
+  color: tomato;
 }
 
 .navbar {
@@ -27,12 +29,6 @@ a {
 
 .brand-logo {
   font-family: Lobster;
-}
-
-html,
-body,
-.block {
-  height: 100%;
 }
 
 .pin-top {
@@ -111,6 +107,7 @@ body,
 
 footer {
   margin-top: 2em;
+  margin-bottom: 0.8em;
 }
 
 footer p {
@@ -122,14 +119,37 @@ p.meta {
   color: #555;
 }
 
+.vertical-align {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: grid;
+  -ms-flex-align: center;
+  align-items: center;
+}
 
-h1, h2 {
+.sad-icon {
+  font-size: 22em;
+  margin: 0;
+}
+
+
+/**
+ * Posts
+ */
+
+h1,
+h2 {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .post h1 {
   color: #666;
+  margin-bottom: 0.1em;
 }
+.post h2 {
+  margin-bottom: 0.1em;
+}
+
 .post p {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -147,18 +167,24 @@ img {
   }
 }
 
+/**
+ * Nav bar
+ */
 .nav {
   text-align: center;
   position: fixed;
   width: 100%;
   top: 0;
   background-color: rgba(255, 255, 255, 0.8);
+  z-index: 1;
 }
+
 .nav li {
   display: inline-grid;
   margin: 0 0.3em;
   width: 60px;
 }
+
 .nav li a {
   color: #555;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -173,18 +199,15 @@ img {
 /** 
  * ARCHIVE 
  */
+
 .archive li .row {
   margin-bottom: 4px;
 }
 
 .archive a {
-  color: #666;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.archive a:hover {
-  color: indigo;
-}
 .archive a p {
   font-size: 1.1em;
 }

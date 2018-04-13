@@ -17,11 +17,6 @@ function realStuff(param) {
 }
 ```
 
-<button onclick="runCode()">
-  <i class="fa fa-play"></i>
-  Run code
-</button>
-
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.js"></script>
 <script>
 this.runCode = function() {

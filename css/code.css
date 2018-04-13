@@ -1,0 +1,24 @@
+pre {
+  padding: 0.8em;
+
+}
+pre, code {  
+  background-color: #282828;
+  color: #fafafa;
+}
+
+pre.highlight code .kd {
+  color: deepskyblue;
+}
+
+pre.highlight code .nx {
+  color: yellowgreen;
+}
+
+pre.highlight code .s1 {
+  color: goldenrod;
+}
+
+pre.highlight code .o {
+  color: deeppink;
+}

@@ -1,13 +1,54 @@
-<!doctype html><html ng-app=blankazucenalgGithubIo><head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114197026-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+--- 
+layout: default 
+title: Blanca Azucena López Garduño
+---
+<div class="profile center-align">
+  <div class="avatar-image"></div>
+  <div class="profile-title">Blanca Azucena López Garduño</div>
+  <div class="profile-subtitle">CS Engineer. Software developer. I like music, drawing, cooking and making DIY stuff. I don't like horror movies</div>
+  
+  <ul class="networks">
+    <li class="service email">
+      <a class="icon bP" href="mailto:hello@blankazucenalg.com" target="_blank" title="Email">
+        <span class="fa fa-envelope-o"></span>
+      </a>
+    </li>    
+    <li class="service github">
+      <a class="icon bP" href="https://github.com/blankazucenalg" target="_blank" title="GitHub">
+        <span class="fa fa-github"></span>
+      </a>
+    </li>
+    <li class="service twitter">
+      <a class="icon bP" href="https://twitter.com/blankazucenalg" target="_blank" title="Twitter">
+        <span class="fa fa-twitter"></span>
+      </a>
+    </li>
+    <!--li class="service lastfm">
+      <a class="icon bP" href="https://www.last.fm/es/user/blankazucenalg" target="_blank" title="Lastfm">
+        <span class="fa fa-lastfm"></span>
+      </a>
+    </li-->
+    <li class="service linkedin">
+      <a class="icon bP" href="https://www.linkedin.com/in/blankazucenalg/" target="_blank" title="LinkedIn">
+        <span class="fa fa-linkedin"></span>
+      </a>
+    </li>
+    
+  </ul>
+  
+</div>
+<div class="posts">
 
-    gtag('config', 'UA-114197026-2');
-  </script>
-  <meta charset=utf-8><title>Blanca Azucena López Garduño</title><meta name=description content=""><meta name=viewport content="width=device-width"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel=stylesheet><!-- Place favicon.ico and apple-touch-icon.png in the root directory --><link rel=stylesheet href=styles/vendor-61109fbf31.css><link rel=stylesheet href=styles/app-c4e89fd9ef.css></head><body><!--[if lt IE 10]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]--><div ui-view></div><script src=scripts/vendor-1d8a5e7fb5.js></script><script src=scripts/app-0dbb3729b6.js></script></body></html>
+  {% for post in site.posts %}
+  <div class="post">
+    <a href="{{ post.url }}" title="{{ post.title }}">
+      <h2>{{ post.title }}</h2>
+    </a>
+    <span>{{ post.date | date_to_string }}</span>
+    <div>
+      {{ post.content }}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+<!-- /.blurb -->

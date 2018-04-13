@@ -2,6 +2,7 @@
 layout: post
 title: "Hello world"
 date: 2018-04-10
+author: Blanca López
 ---
 
 ![alt text](http://www.saifurrahman.com/wp-content/uploads/2016/04/HelloWorld.jpg "Hello world")

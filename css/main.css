@@ -4,7 +4,8 @@ html {
 }
 
 body>.container {
-  min-height: 90vh;
+  margin-top: 4em;
+  min-height: 82vh;
 }
 
 p {
@@ -13,7 +14,9 @@ p {
 
 a {
   color: midnightblue;
-
+}
+a:hover {
+  color: tomato;
 }
 
 .navbar {
@@ -26,12 +29,6 @@ a {
 
 .brand-logo {
   font-family: Lobster;
-}
-
-html,
-body,
-.block {
-  height: 100%;
 }
 
 .pin-top {
@@ -56,10 +53,6 @@ body,
 
 .container {
   max-width: 800px;
-}
-
-.profile {
-  margin-top: 3em;
 }
 
 .avatar-image {
@@ -106,14 +99,17 @@ body,
 
 .networks .service a.icon {
   color: #666;
+  transition: all .3s;
 }
 
 .networks .service a.icon:hover {
   color: midnightblue;
+  font-size: 1.1em;
 }
 
 footer {
   margin-top: 2em;
+  margin-bottom: 0.8em;
 }
 
 footer p {
@@ -125,14 +121,41 @@ p.meta {
   color: #555;
 }
 
+.height-100 {
+  height: 100%;
+}
 
-h1, h2 {
+.vertical-align {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: grid;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.sad-icon {
+  font-size: 22em;
+  margin: 0;
+}
+
+
+/**
+ * Posts
+ */
+
+h1,
+h2 {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .post h1 {
   color: #666;
+  margin-bottom: 0.1em;
 }
+.post h2 {
+  margin-bottom: 0.1em;
+}
+
 .post p {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -148,4 +171,65 @@ img {
   img {
     margin-left: -5%;
   }
+}
+
+/**
+ * Nav bar
+ */
+.nav {
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 1;
+}
+
+.nav li {
+  display: inline-grid;
+  margin: 0 0.3em;
+  width: 60px;
+}
+
+.nav li a {
+  color: #555;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+@media (max-width: 600px) {
+  .nav li {
+    width: 23%;
+  }
+}
+
+/** 
+ * ARCHIVE 
+ */
+
+.archive li .row {
+  margin-bottom: 4px;
+}
+
+.archive a {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.archive a p {
+  font-size: 1.1em;
+}
+
+.left-pane-archive {
+  padding-right: 4px !important;
+}
+
+.right-pane-archive {
+  padding-left: 4px !important;
+}
+
+.about p {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.3em;
+}
+.about p.highlight {
+  font-size: 1.5em;
 }

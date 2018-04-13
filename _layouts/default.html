@@ -23,7 +23,7 @@
 			<!-- Open Graph data -->
 			<meta property="og:title" content="{{ page.title }}" />
 			<meta property="og:type" content="article" />
-			<meta property="og:url" content="{{ page.url }}" />
+			<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
 			<meta property="og:image" content="{% if page.image %}{{ page.image }}}{% else %}https://scontent.fmex14-1.fna.fbcdn.net/v/t1.0-9/556748_453510564659296_1351327878_n.jpg?_nc_cat=0&oh=bceaa2ae13136012d588f28af90e2d70&oe=5B70BBC0{% endif %}" />
 		
 			<meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 155 }}{% else %}{{ site.description }}{% endif

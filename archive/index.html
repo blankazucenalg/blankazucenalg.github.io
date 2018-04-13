@@ -3,13 +3,18 @@ layout: default
 title: Archive - Blanca Azucena López Garduño
 ---
 <div class="archive center-align">
+  <h1>Archive</h1>
+
+  {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %} {% for yearPosts in postsByYear
+  %}
+  <h3>{{ yearPosts.name }}</h3>
   <ul>
-    {% for post in site.posts %}
+    {% for post in yearPosts.items %}
     <li>
       <a href="{{ post.url }}" title="{{ post.title }}">
         <div class="row">
           <div class="col s6 right-align left-pane-archive">
-            <span>{{ post.date | date: "%Y-%b-%d" }}</span>
+            <span>{{ post.date | date: "%B %d" }}</span>
           </div>
           <div class="col s6 left-align right-pane-archive">
             <span>{{ post.title }}</span>
@@ -19,4 +24,5 @@ title: Archive - Blanca Azucena López Garduño
     </li>
     {% endfor %}
   </ul>
+  {% endfor %}
 </div>

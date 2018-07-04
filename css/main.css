@@ -138,6 +138,10 @@ p.meta {
   margin: 0;
 }
 
+.abstract {
+  padding: 0 3em;
+  font-size: 14px;
+}
 
 /**
  * Posts

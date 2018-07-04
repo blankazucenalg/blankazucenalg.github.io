@@ -139,8 +139,10 @@ p.meta {
 }
 
 .abstract {
-  padding: 0 3em;
+  padding: 0 2em;
   font-size: 14px;
+  max-width: 500px;
+  margin: auto;
 }
 
 /**

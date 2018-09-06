@@ -7,7 +7,7 @@ category: Dev
 tags: [front end, javascript, dataviz, d3]
 ---
 
-![alt text](../assets/images/parallax1.jpg)
+![D3.js](../assets/images/09375037053.png)
 
 D3.js es una biblioteca JavaScript diseñada para la creación de visualizaciones interactivas utilizando tecnologías como HTML, CSS y SVG.
 

@@ -63,7 +63,7 @@ Ok, ya vimos que podemos seleccionar elementos y cambiar sus propiedades, pero e
 
 Esto se logra a través del metodo `.data()` que por default crea un enlace _uno a uno_ con los elementos existentes.
 
-![1536198751210](/home/azu/Proyectos/blanch/blankazucenalg.github.io/assets/images/1536198751210.png)
+![1536198751210](../assets/images/1536198751210.png)
 
 Así, si existen 5 elementos en nuestra selección y tenemos 5 datos en una variable, los enlazará a cada uno. A esta selección por default se le llama subselección _update_.
 

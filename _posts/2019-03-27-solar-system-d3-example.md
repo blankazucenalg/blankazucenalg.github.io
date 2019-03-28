@@ -24,7 +24,7 @@ author: Blanca López
   const sunx = 200;
   const suny = 200;
   const sunr = 50;
-  const diag = Math.sqrt(2 * (450 * 450));
+  const diag = Math.sqrt(2 * (500 * 500));
   console.log(diag);
   const t0    = new Date().setHours(0,0,0,0);
   const delta = (Date.now() - t0);
@@ -65,7 +65,7 @@ author: Blanca López
         const maxSize = d3.max(data4, d => d.radius);
         // Obtén el tamaño más grande de todos los planetas (d3.max(data4, function(d) { //Qué propiedad quieres? });
         const size = d3.scaleLinear()
-          .range( [0, 3, 20])
+          .range( [0, 2, 20])
           .domain([0, minSize, maxSize]);
         console.log(size(695510));
         const color = d3.scaleOrdinal()

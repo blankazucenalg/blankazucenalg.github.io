@@ -1,0 +1,20 @@
+#planets {
+  background-color: #222;
+  background-image: url('/assets/images/astronomy.jpg');
+}
+.relative {
+  position: relative;
+}
+#info-planet {
+  background: #eee;
+}
+#info-planet .cont {
+  padding: 1rem 2rem 0.75rem 2rem;
+}
+#info-planet p {
+  font-family: sans-serif !important;
+}
+.datum {
+  color: palevioletred;
+  font-weight: bold;
+}

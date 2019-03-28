@@ -7,9 +7,11 @@ author: Blanca López
 
 <!-- ![alt text](assets/images/solar_system.png "Wallpaper") -->
 <style type="text/css"> 
+  @import url('https://raw.githubusercontent.com/Caged/d3-tip/master/examples/example-styles.css');
   @import url("/css/solar_system.css");
 </style>
 <script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
 <div class="relative">
   <div id="info-planet"></div>
   <div id="planets"></div>
@@ -26,6 +28,9 @@ author: Blanca López
   console.log(diag);
   const t0    = new Date().setHours(0,0,0,0);
   const delta = (Date.now() - t0);
+  const tip = d3.tip()
+    .attr('class', 'd3-tip')
+    .html(d => d.planet);
   const svg = d3.select('#planets')
     .append('svg')
     .attr('width', width)
@@ -34,6 +39,7 @@ author: Blanca López
     .style('height', 'auto')
     .attr('viewBox', `0 0 ${width} ${height}`)
     .attr('preserveAspectRatio', 'xMidYMid meet');
+  svg.call(tip);
   svg.append('circle')
     .classed('sun', true)
     .attr('cx', sunx)
@@ -59,8 +65,8 @@ author: Blanca López
         const maxSize = d3.max(data4, d => d.radius);
         // Obtén el tamaño más grande de todos los planetas (d3.max(data4, function(d) { //Qué propiedad quieres? });
         const size = d3.scaleLinear()
-          .range( [0, 1])
-          .domain([0, minSize]);
+          .range( [0, 3, 20])
+          .domain([0, minSize, maxSize]);
         console.log(size(695510));
         const color = d3.scaleOrdinal()
           .range(['#424E4C', '#7C5531', '#7BBBF0', '#CC522C', '#A67845', '#EBA340', '#75D6F1', '#2C73A9'])
@@ -93,26 +99,11 @@ author: Blanca López
           .attr('r', d => size(d.radius))
           .attr('fill', d => color(d.planet))
           .style('cursor', 'pointer')
-          .on('mouseover', d => {
-            console.log(d3.selectAll('.planet-group').data([d], d => d.planet));
-            d3.selectAll('.planet-group')
-              .data([d], d => d.planet)
-                .append('text')
-                  .attr('class', 'texto-planeta')
-                  .attr('x', d => {
-                    c = distance(d.distance);
-                    return c / Math.sqrt(2);
-                  })
-                  .attr('y', d => {
-                    c = distance(d.distance);
-                    return c / Math.sqrt(2) - size(d.radius) - 5;
-                  })
-                  .attr('fill', 'white')
-                  .attr('text-anchor', 'middle')
-                  .text(d.planet);
+          .on('mouseover', function(d) {
+            tip.show(d, this);
           })
-          .on('mouseout', d => {
-            d3.selectAll('.texto-planeta').remove();
+          .on('mouseout', function(d) {
+            tip.hide(d, this);
           })
           .on('click', d => {
             const earth = data4.find(o => o.planet === 'Tierra');
@@ -131,7 +122,7 @@ author: Blanca López
         setInterval(function(){
           var delta = (Date.now() - t0);
           svg.selectAll(".planet-group").attr("transform", function(d) {
-            return `translate(${sunx},${suny})rotate(${(0 + (delta * (d.speed/500)))})`;
+            return `translate(${sunx},${suny})rotate(${(0 + (delta * (d.speed/800)))})`;
           });
         }, 40);
       });

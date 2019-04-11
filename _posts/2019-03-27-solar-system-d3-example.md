@@ -17,15 +17,12 @@ author: Blanca López
   <div id="planets"></div>
 </div>
 <script type="text/javascript">
-  console.log('hey listen!');
-  console.log(d3.select('#planets'));
   const width = 900;
   const height = 900;
   const sunx = 200;
   const suny = 200;
   const sunr = 50;
   const diag = Math.sqrt(2 * (500 * 500));
-  console.log(diag);
   const t0    = new Date().setHours(0,0,0,0);
   const delta = (Date.now() - t0);
   const tip = d3.tip()
@@ -127,5 +124,3 @@ author: Blanca López
         }, 40);
       });
 </script>
-
-

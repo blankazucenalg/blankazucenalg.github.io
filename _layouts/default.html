@@ -55,8 +55,9 @@
 			{{ content }}
 			
 			</div><!-- /.container -->
-			<footer>
-				<p class="center align">© All rights reserved | 2018</p>
+			<footer >
+				<p id="footer-text" class="center align">© All rights reserved | 2018 - </p>
+				<script>document.getElementById('footer-text').appendChild(document.createTextNode(new Date().getFullYear()))</script>
       </footer>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 		</body>

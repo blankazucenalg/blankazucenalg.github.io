@@ -4,7 +4,7 @@ title: Básicos de D3.js - Selecciones y propiedades
 date: 2018-09-05
 author: Blanca López
 categories: dataviz
-tags: [front end, javascript, dataviz, d3]
+tags: [front-end, javascript, dataviz, d3]
 ---
 
 ![D3.js](../assets/images/09375037053.png)

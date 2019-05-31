@@ -4,6 +4,8 @@ title: "Hello world"
 date: 2018-04-12
 author: Blanca López
 image: http://www.saifurrahman.com/wp-content/uploads/2016/04/HelloWorld.jpg
+categories: blog
+tags: 
 ---
 
 ![alt text]({{page.image}} "Hello world")

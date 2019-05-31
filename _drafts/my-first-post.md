@@ -3,6 +3,7 @@ layout: post
 title: "My first post"
 date: 2018-04-11
 author: Blanca López
+categories: sample
 ---
 
 ![alt text](https://images7.alphacoders.com/411/thumb-1920-411820.jpg "Wallpaper")

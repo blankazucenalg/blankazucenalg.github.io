@@ -3,6 +3,8 @@ layout: post
 title: "D3 ejemplo: Sistema Solar"
 date: 2019-03-27
 author: Blanca López
+categories: dataviz
+tags: [javascript, d3, front-end, dataviz]
 ---
 
 <!-- ![alt text](assets/images/solar_system.png "Wallpaper") -->

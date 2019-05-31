@@ -1,11 +1,35 @@
---- 
-layout: default 
+---
+layout: default
 comments: true
 ---
 <div class="post">
   <h1>{{ page.title }}</h1>
-  <span class="meta">{{ page.date | date_to_string }}</span> | 
+  <span class="meta">{{ page.date | date_to_string }}</span> |
   <a href="/"><span class="meta">{{ page.author }}</span></a>
+  <div class="post-categories">
+    <span>Categorías: </span>
+    {% if post %}
+      {% assign categories = post.categories %}
+    {% else %}
+      {% assign categories = page.categories %}
+    {% endif %}
+    {% for category in categories %}
+    <a href="{{site.baseurl}}/categories/#{{category|slugize}}">{{category}}</a>
+    {% unless forloop.last %}&nbsp;{% endunless %}
+    {% endfor %}
+  </div>
+  <div class="post-categories">
+    <span>Etiquetas: </span>
+    {% if post %}
+      {% assign tags = post.tags %}
+    {% else %}
+      {% assign tags = page.tags %}
+    {% endif %}
+    {% for tag in tags %}
+    <a href="{{site.baseurl}}/tags/#{{tag|slugize}}">{{tag}}</a>
+    {% unless forloop.last %}&nbsp;{% endunless %}
+    {% endfor %}
+  </div>
   <div class="content">
     {{ content }}
   </div>

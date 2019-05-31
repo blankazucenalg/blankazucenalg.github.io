@@ -4,6 +4,8 @@ title: "Configurar diferentes proyectos Angular en un mismo dominio en Nginx"
 date: 2018-07-03
 author: Blanca López
 image: /assets/images/angular-nginx.png
+categories: devops
+tags: [Angular, nignx, devops, server, config]
 ---
 
 ![alt text]({{page.image}} "Angular y Nginx")

@@ -3,6 +3,8 @@ layout: post
 title: "D3 color linear scales"
 date: 2019-04-11
 author: Blanca López
+categories: dataviz
+tags: [javascript, d3, font-end, dataviz, color scales]
 ---
 
 

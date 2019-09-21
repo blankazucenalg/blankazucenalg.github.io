@@ -1,0 +1,125 @@
+---
+layout: nonavbar
+title: Resumé - Blanca Azucena López Garduño
+---
+<div class="resume vertical-align height-100">
+  <div class="row">
+    <div class="col s12 m3">
+      <img class="responsive-img rounded" alt="Blanca López" src="https://avatars3.githubusercontent.com/u/6007352?s=460&v=4"/>
+    </div>
+    <div class="col s12 m9">
+      <h1>
+        {{ site.data.resume.fullname }}
+      </h1>
+      <!-- contact card -->
+      <div>
+        <div class="row">
+          <div class="col s12">
+            <span class="fa fa-home"></span>
+            <address>{{site.data.resume.address}}</address>
+          </div>
+          <div class="col s12 m6">
+            <span class="fa fa-envelope-o"></span>
+            <a href="mailto:{{site.data.resume.email}}"><span class="email">{{site.data.resume.email}}</span></a>
+          </div>
+          <div class="col s12 m6">
+            <span class="fa fa-linkedin"></span>
+            <a href="https://www.linkedin.com/in/{{site.data.resume.linkedin}}" target="_blank"><span class="linkedin">{{ site.data.resume.linkedin}}</span></a>
+          </div>
+          <div class="col s12">
+            <span class="fa fa-comments"></span>
+            <span>{{ site.data.resume.languages }}</span>
+          </div>
+          <div class="col s12">
+            <span class="fa fa-university"></span>
+            <span>{{ site.data.resume.education }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col s12">
+      <h2>About me</h2>
+      <p>
+        {{ site.data.resume.about_me }}
+      </p>
+      <h2>Experience</h2>
+      {% for job in site.data.resume.jobs %}
+      <div class="job-card">
+        <p class="caption mb-0">{{ job.from }} - {{ job.to }} ({{job.time}})</p>
+        <p class="job-title mt-0 mb-0">
+          <b>{{ job.name }}</b> - <i>{{ job.jobtitle }}</i>
+        </p>
+        {% for paragraph in job.responsabilities %}
+          <p>{{ paragraph }}</p>
+        {% endfor %}
+        <ul class="dashed">
+          {% for tech in job.technologies %}
+          <li>{{ tech }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<style>
+address {
+  display: inline-block;
+}
+.resume p {
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: 12pt;
+}
+.resume p.highlight {
+font-size: 1.5em;
+}
+h1 {
+  font-size: 2.5em;
+  margin-top: .6em;
+}
+h2 {
+  font-size: 1.8em;
+}
+.rounded {
+  border-radius: 50%;
+  -webkit-box-shadow: 2px 2px 44px -8px rgba(102,102,102,1);
+  -moz-box-shadow: 2px 2px 44px -8px rgba(102,102,102,1);
+  box-shadow: 2px 2px 44px -8px rgba(102,102,102,1);;
+}
+p {
+  font-size: 14pt;
+}
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+.mt-0 {
+  margin-top: 0 !important;
+}
+.job-card {
+  margin-bottom: 2em;
+}
+p.job-title, .job-title {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 14pt;
+}
+p.caption, .caption {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 10pt;
+  margin-bottom: 0;
+  color: #666;
+}
+ul {
+  margin: 0;
+}
+ul.dashed {
+  list-style-type: none;
+}
+ul.dashed > li {
+  text-indent: 0px;
+}
+ul.dashed > li:before {
+  content: "-";
+  text-indent: 0;
+  margin-right: 5px;
+}
+</style>

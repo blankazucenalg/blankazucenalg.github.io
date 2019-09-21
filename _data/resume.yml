@@ -25,7 +25,8 @@ jobs:
     to: September 2019
     time: 3 years
     responsabilities:
-      - As a full-stack software engineer I have developed several data management & data visualization platforms, along with animated storytellings for different clients, working with a multi-disciplinary team through the whole process from client's requirements gathering, backlog organization, database administration, back-end and front-end development and finally deploying in servers.
+      - As a full-stack software engineer I have developed several data management & data visualization platforms, along with animated storytellings for different clients.
+      - Working with a multi-disciplinary team, I have been through the whole process from client's requirements gathering, backlog's issues organization, database administration, back-end and front-end development and finally deploying in servers, as well as being in touch with clients and managing the team.
       - I have contributed to platforms like Como Vamos Nuevo León's platform to make public citizens perception and Conapred's "SINDIS", that allows people to get analysed information form a national discrimination survey and some official posts from the organization.
     technologies:
       - MEAN Stack (MongoDB, Express, Angular, Node)

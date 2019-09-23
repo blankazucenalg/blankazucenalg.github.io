@@ -59,10 +59,28 @@ title: Resumé - Blanca Azucena López Garduño
         </ul>
       </div>
       {% endfor %}
+
+      <h2>Off-work</h2>
+      {% for job in site.data.resume.off_work %}
+      <div class="job-card">
+        <p class="caption mb-0">{{ job.type }} - {{ job.date }}</p>
+        <p class="job-title mt-0 mb-0">
+          <b>{{ job.name }}</b> - <i>{{ job.place }}</i>
+        </p>
+        {% for paragraph in job.info %}
+          <p>{{ paragraph }}</p>
+        {% endfor %}
+      </div>
+      {% endfor %}
     </div>
   </div>
 </div>
 <style>
+/*
+.resume {
+  width: 216mm;
+}
+*/
 address {
   display: inline-block;
 }

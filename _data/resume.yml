@@ -14,8 +14,8 @@ jobs:
     responsibilities:
       - As a software engineer in OS City, I have helped to build the City Manager Platform that allows citizens and government employees to manage citizen reports and analyse that information to display interpretable results.
     technologies:
-      - Nuxt, Vuejs, D3js
-      - JavaScript, R, Python
+      - Nuxtjs, Vuejs, D3js
+      - JavaScript, R, Python v2.7
       - GCP, Firebase, CartoDB
       - Legacy code management
 
@@ -30,7 +30,7 @@ jobs:
       - I have contributed to platforms like Como Vamos Nuevo León's platform (http://datos.comovamosnl.org) to make public citizens perception and Conapred's "SINDIS", that allows people to get analysed information form a national discrimination survey and some official posts from the organization (http://sindis.conapred.org.mx).
     technologies:
       - MEAN Stack (MongoDB, Express, Angular, Node)
-      - Javascript, D3js, R, PHP, Python, Bash
+      - TypeScript, D3js, R, PHP, Python (v2.7 and v3), Bash
       - Use and creation of REST services with Sails v0.12
       - Redis, CartoDB, Vuejs
       - Wordpress, MySQL, Nginx, AWS (EC2, S3, IAM)
@@ -46,3 +46,10 @@ jobs:
       - HTML, Pug, CSS, Stylus, SASS
       - CartoDB, Spreadsheets
       - Legacy code management
+off_work:
+  - type: Presentation
+    name: "Análisis de datos para la toma de decisiones"
+    date: October 2018
+    place: Museo Interactivo de Economía (MIDE)
+    info:
+      - I participated in their second edition of "Charlas de economía en mangas de camisa" to describe the process required to analyse data and help you to make decisions.

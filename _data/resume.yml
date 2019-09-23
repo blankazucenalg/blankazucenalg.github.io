@@ -1,0 +1,55 @@
+fullname: Blanca Azucena López Garduño
+address: Ecatepec 55100, Estado de México, México
+email: blankazucenalg@gmail.com
+linkedin: blankazucenalg
+languages: Spanish, English
+education: Computer Science Engineer, ESCOM, IPN (2011-2016)
+about_me: I fell in love with software development when I discovered that it could be used to solve problems that seemed impossible. I enjoy creating solutions that aim to improve people's lives, share ideas and learn from each experience, always trying to improve myself. I love music and I don't like horror movies.
+jobs:
+  - name: OS City
+    jobtitle: Software Engineer
+    from: February 2019
+    to: Present
+    time: 8 months
+    responsibilities:
+      - As a software engineer in OS City, I have helped to build the City Manager Platform that allows citizens and government employees to manage citizen reports and analyse that information to display interpretable results.
+    technologies:
+      - Nuxtjs, Vuejs, D3js
+      - JavaScript, R, Python v2.7
+      - GCP, Firebase, CartoDB
+      - Legacy code management
+
+  - name: DATA FOUR
+    jobtitle: Full-Stack Software Engineer
+    from: October 2016
+    to: September 2019
+    time: 3 years
+    responsibilities:
+      - As a full-stack software engineer I have developed several data management & data visualization platforms, along with animated storytellings for different clients.
+      - Working with a multi-disciplinary team, I have been through the whole process from client's requirements gathering, backlog's issues organization, database administration, back-end and front-end development and finally deploying in servers, as well as being in touch with clients and managing the team.
+      - I have contributed to platforms like Como Vamos Nuevo León's platform (http://datos.comovamosnl.org) to make public citizens perception and Conapred's "SINDIS", that allows people to get analysed information form a national discrimination survey and some official posts from the organization (http://sindis.conapred.org.mx).
+    technologies:
+      - MEAN Stack (MongoDB, Express, Angular, Node)
+      - TypeScript, D3js, R, PHP, Python (v2.7 and v3), Bash
+      - Use and creation of REST services with Sails v0.12
+      - Redis, CartoDB, Vuejs
+      - Wordpress, MySQL, Nginx, AWS (EC2, S3, IAM)
+  - name: DATA FOUR
+    jobtitle: Data Viz Developer
+    from: February 2016
+    to: October 2016
+    time: 8 months
+    responsibilities:
+      - As a dataviz developer I worked creating interactive visualizations for different clients building front-end solutions to manage and display data. We generated blog posts, interactive visualizations and microsites, for example visualizations using sports data to allow people to know relevant info from Olympic games and an interactive medal board.
+    technologies:
+      - AngularJS, D3js, JQuery
+      - HTML, Pug, CSS, Stylus, SASS
+      - CartoDB, Spreadsheets
+      - Legacy code management
+off_work:
+  - type: Presentation
+    name: "Análisis de datos para la toma de decisiones"
+    date: October 2018
+    place: Museo Interactivo de Economía (MIDE)
+    info:
+      - I participated in their second edition of "Charlas de economía en mangas de camisa" to describe the process required to analyse data and help you to make decisions.

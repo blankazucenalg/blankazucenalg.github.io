@@ -1,12 +1,13 @@
---- 
-layout: default 
+---
+layout: navbar
 title: Archive - Blanca Azucena López Garduño
 ---
+
 <div class="archive center-align">
   <h1>Archive</h1>
 
-  {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %} {% for yearPosts in postsByYear
-  %}
+  {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date:
+  '%Y'" %} {% for yearPosts in postsByYear %}
   <h3>{{ yearPosts.name }}</h3>
   <ul>
     {% for post in yearPosts.items %}

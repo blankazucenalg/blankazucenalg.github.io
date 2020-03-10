@@ -3,3 +3,4 @@ markdown: kramdown
 theme: jekyll-theme-cayman
 description: Desarrollo, tecnología y blog personal
 url: blankazucenalg.com
+permalink: /:categories/:year/:month/:day/:title:output_ext

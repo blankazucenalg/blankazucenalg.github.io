@@ -1,0 +1,20 @@
+---
+layout: navbar
+---
+
+<div class="container">
+  <div class="row">
+    {% if sidebar != false %}
+    <div class="col s12 m8">
+      {% else %}
+      <div class="col s12">
+        {% endif %} {{ content }}
+      </div>
+      {% if sidebar != false %}
+      <div class="col s12 m4">
+        {% include sidenav.html %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

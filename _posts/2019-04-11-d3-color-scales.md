@@ -7,9 +7,7 @@ categories: dataviz
 tags: [javascript, d3, front-end, dataviz, color scales]
 ---
 
-
-
-<!-- ![alt text](assets/images/solar_system.png "Wallpaper") -->
+Dentro de las bondades de d3.js, además de generar escalas lineales con valores númericos, también nos es posible generar escalas de colores, que nos ayudarán a visualizar los valores de los datos que vamos a representar gráficamente.
 
 <style type="text/css"> 
   @import url('https://raw.githubusercontent.com/Caged/d3-tip/master/examples/example-styles.css');
@@ -26,7 +24,7 @@ tags: [javascript, d3, front-end, dataviz, color scales]
 
 ```javascript
 var data = [4, 5, 9, 11, 16, 18, 27, 31, 32, 58, 59, 100, 225];
-var colors = ['#D0BBEF', '#583A5E'];
+var colors = ["#D0BBEF", "#583A5E"];
 ```
 
 ```javascript
@@ -35,15 +33,15 @@ var colorScaleLinear = d3
   .range(colors)
   .domain(d3.extent(data));
 
-d3.select('#linear-scale')
-  .selectAll('.rect')
+d3.select("#linear-scale")
+  .selectAll(".rect")
   .data(data)
   .enter()
-  .append('div')
-  .style('width', d => `${widthScale(d)}%`)
-  .style('height', '25px')
-  .style('margin-bottom', '7px')
-  .style('background-color', d => colorScaleLinear(d))
+  .append("div")
+  .style("width", d => `${widthScale(d)}%`)
+  .style("height", "25px")
+  .style("margin-bottom", "7px")
+  .style("background-color", d => colorScaleLinear(d));
 ```
 
 <div class="relative">
@@ -55,7 +53,7 @@ d3.select('#linear-scale')
 
 ```javascript
 var data = [4, 5, 9, 11, 16, 18, 27, 31, 32, 58, 59, 100, 225];
-var colors = ['#D0BBEF', '#795DA0', '#583A5E'];
+var colors = ["#D0BBEF", "#795DA0", "#583A5E"];
 ```
 
 ```javascript
@@ -64,15 +62,15 @@ var colorScaleLinearMean = d3
   .range([colors[0], colors[4], colors[9]])
   .domain([d3.min(data), d3.mean(data), d3.max(data)]); // [4, 45.76923076923077, 225]
 
-d3.select('#linear-scale-mean')
-  .selectAll('.rect')
+d3.select("#linear-scale-mean")
+  .selectAll(".rect")
   .data(data)
   .enter()
-  .append('div')
-  .style('width', d => `${widthScale(d)}%`)
-  .style('height', '25px')
-  .style('margin-bottom', '7px')
-  .style('background-color', d => colorScaleLinearMean(d))
+  .append("div")
+  .style("width", d => `${widthScale(d)}%`)
+  .style("height", "25px")
+  .style("margin-bottom", "7px")
+  .style("background-color", d => colorScaleLinearMean(d));
 ```
 
 <div class="relative">
@@ -84,7 +82,7 @@ d3.select('#linear-scale-mean')
 
 ```javascript
 var data = [4, 5, 9, 11, 16, 18, 27, 31, 32, 58, 59, 100, 225];
-var colors = ['#D0BBEF', '#795DA0', '#583A5E'];
+var colors = ["#D0BBEF", "#795DA0", "#583A5E"];
 ```
 
 ```javascript
@@ -93,15 +91,15 @@ var colorScaleLinearMedian = d3
   .range([colors[0], colors[4], colors[9]])
   .domain([d3.min(data), d3.median(data), d3.max(data)]); // [4, 27, 225]
 
-d3.select('#linear-scale-median')
-  .selectAll('.rect')
+d3.select("#linear-scale-median")
+  .selectAll(".rect")
   .data(data)
   .enter()
-  .append('div')
-  .style('width', d => `${widthScale(d)}%`)
-  .style('height', '25px')
-  .style('margin-bottom', '7px')
-  .style('background-color', d => colorScaleLinearMedian(d))
+  .append("div")
+  .style("width", d => `${widthScale(d)}%`)
+  .style("height", "25px")
+  .style("margin-bottom", "7px")
+  .style("background-color", d => colorScaleLinearMedian(d));
 ```
 
 <div class="relative">
@@ -117,33 +115,41 @@ d3.select('#linear-scale-median')
 
 ```javascript
 var data = [4, 5, 9, 11, 16, 18, 27, 31, 32, 58, 59, 100, 225];
-var colors = ['#583A5E', '#63436E', '#6C4C7E', '#73558F', '#795DA0', 
-  '#7D66B0', '#806FC1', '#8077D2', '#AA98E2', '#D0BBEF'].reverse();
+var colors = [
+  "#583A5E",
+  "#63436E",
+  "#6C4C7E",
+  "#73558F",
+  "#795DA0",
+  "#7D66B0",
+  "#806FC1",
+  "#8077D2",
+  "#AA98E2",
+  "#D0BBEF"
+].reverse();
 ```
 
 ```javascript
 var n = 10;
-var quantiles = d3
-  .range(n)
-  .map(d => {
-    return d3.quantile(data, d / (n - 1));
-  });
-// [4, 6.333333333333333, 10.333333333333332, 16, 20.999999999999996, 
+var quantiles = d3.range(n).map(d => {
+  return d3.quantile(data, d / (n - 1));
+});
+// [4, 6.333333333333333, 10.333333333333332, 16, 20.999999999999996,
 // 29.666666666666668, 32, 58.333333333333336, 86.33333333333331, 225]
 var colorScaleQuantiles = d3
   .scaleLinear()
   .range(colors)
   .domain(quantiles);
 
-d3.select('#linear-scale-quantiles')
-  .selectAll('.rect')
+d3.select("#linear-scale-quantiles")
+  .selectAll(".rect")
   .data(data)
   .enter()
-  .append('div')
-  .style('width', d => `${widthScale(d)}%`)
-  .style('height', '25px')
-  .style('margin-bottom', '7px')
-  .style('background-color', d => colorScaleQuantiles(d))
+  .append("div")
+  .style("width", d => `${widthScale(d)}%`)
+  .style("height", "25px")
+  .style("margin-bottom", "7px")
+  .style("background-color", d => colorScaleQuantiles(d));
 ```
 
 <div class="relative">

@@ -10,3 +10,5 @@ coverage/
 
 
 _site/
+vendor/
+.build/

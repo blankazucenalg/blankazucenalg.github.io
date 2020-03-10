@@ -2,16 +2,16 @@
 layout: default
 comments: true
 ---
-<div class="post">
+<div class="post content-post">
   <h1>{{ page.title }}</h1>
   <span class="meta">{{ page.date | date_to_string }}</span> |
   <a href="/"><span class="meta">{{ page.author }}</span></a>
   <div class="post-categories">
     <span>Categorías: </span>
     {% if post %}
-      {% assign categories = post.categories %}
+    {% assign categories = post.categories %}
     {% else %}
-      {% assign categories = page.categories %}
+    {% assign categories = page.categories %}
     {% endif %}
     {% for category in categories %}
     <a href="{{site.baseurl}}/categories/#{{category|slugize}}">{{category}}</a>
@@ -21,9 +21,9 @@ comments: true
   <div class="post-categories">
     <span>Etiquetas: </span>
     {% if post %}
-      {% assign tags = post.tags %}
+    {% assign tags = post.tags %}
     {% else %}
-      {% assign tags = page.tags %}
+    {% assign tags = page.tags %}
     {% endif %}
     {% for tag in tags %}
     <a href="{{site.baseurl}}/tags/#{{tag|slugize}}">{{tag}}</a>
@@ -31,16 +31,16 @@ comments: true
     {% endfor %}
   </div>
   <div class="content">
+    <img src="{{ page.image }}" alt="{{ page.imageAltText}}" srcset="">
     {{ content }}
   </div>
 
   {% if page.comments %}
   <div id="disqus_thread"></div>
   <script>
-
     /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
     /*
     var disqus_config = function () {
     this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
@@ -48,11 +48,13 @@ comments: true
     };
     */
     (function () { // DON'T EDIT BELOW THIS LINE
-      var d = document, s = d.createElement('script');
+      var d = document,
+        s = d.createElement('script');
       s.src = 'https://blankazucenalg.disqus.com/embed.js';
       s.setAttribute('data-timestamp', +new Date());
       (d.head || d.body).appendChild(s);
     })();
+
   </script>
   <noscript>Please enable JavaScript to view the
     <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>

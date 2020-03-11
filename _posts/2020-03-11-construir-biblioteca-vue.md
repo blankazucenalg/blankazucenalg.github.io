@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Como utilizar un proyecto de Vue como biblioteca de componentes
+title: Cómo utilizar un proyecto de Vue como biblioteca de componentes
 date: 2020-03-11
 author: Blanca López
 image: /assets/images/2020-03-11-construir-biblioteca-vue/image-20200311132557648.png
@@ -12,7 +12,7 @@ tags:
 
 <!-- # Como utilizar un proyecto de Vue como biblioteca de componentes -->
 
-Ultimamente he estado utilizando Vuejs para diferentes proyectos y en ocasiones me he encontrado con la necesidad de reutilizar ciertos componentes en otros proyectos. ¿Cómo podemos utilizar estos componentes en una biblioteca que pueda ser utilizada por otros proyectos? Afortunadamente, las herramientas de Vue nos permiten configurar _bundles_ en forma de biblioteca para exportar este tipo de componentes.
+Últimamente he estado utilizando Vuejs para diferentes proyectos y en ocasiones me he encontrado con la necesidad de reutilizar ciertos componentes en otros proyectos. ¿Cómo podemos utilizar estos componentes en una biblioteca que pueda ser utilizada por otros proyectos? Afortunadamente, las herramientas de Vue nos permiten configurar _bundles_ en forma de biblioteca para exportar este tipo de componentes.
 
 <!--more-->
 
@@ -30,7 +30,7 @@ vue create dummylib
 vue create testapp
 ```
 
-Si corremos el proyecto utilizando `yarn serve` podremos ver el despliegue de la applicación demo en ambos proyectos.
+Si corremos el proyecto utilizando `yarn serve` podremos ver el despliegue de la aplicación demo en ambos proyectos.
 
 Cuando se hace la construcción de un proyecto en Vue, por debajo se utiliza **webpack** para construir el sitio con los _assets_ y dependencias necesarias.
 
@@ -304,10 +304,8 @@ Al inicializar nuestra biblioteca como plugin, ya no es necesario hacer el impor
 </template>
 ```
 
-Y _voilá_, ahora podemos hacer uso de ambos componentes dentro de `testapp`
+Y _voilá_, ahora podemos hacer uso de ambos componentes dentro de `testapp` y utilizando la extensión de herramientas de Vue en el navegador podemos ver el estado del _store_.
 
 ![image-20200311132557648](/assets/images/2020-03-11-construir-biblioteca-vue/image-20200311132557648.png)
-
-Utilizando la extensión de herramientas de Vue en el navegador podemos ver el estado del _store._
 
 ![image-20200311132547718](/assets/images/2020-03-11-construir-biblioteca-vue/image-20200311132547718.png)

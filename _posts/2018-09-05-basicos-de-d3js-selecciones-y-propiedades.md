@@ -13,6 +13,8 @@ D3.js es una biblioteca JavaScript diseñada para la creación de visualizacione
 
 En general es una herramienta flexible capaz de permitirnos transformar el contenido de una página para representar visualmente información existente en JavaScript. Pero, ¿cómo funciona?
 
+<!--more-->
+
 ## Selectores y propiedades
 
 Primero que nada, se encuentran los métodos `select()` y `selectAll()` que nos permiten, como su nombre lo indica, seleccionar elementos (nodos) del _DOM_ (Document Object Model) que compone nuestra página. Existen varios tipos de selectores que podemos utilizar.

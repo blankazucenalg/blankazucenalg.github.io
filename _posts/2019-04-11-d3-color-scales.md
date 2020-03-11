@@ -9,6 +9,8 @@ tags: [javascript, d3, front-end, dataviz, color scales]
 
 Dentro de las bondades de d3.js, además de generar escalas lineales con valores númericos, también nos es posible generar escalas de colores, que nos ayudarán a visualizar los valores de los datos que vamos a representar gráficamente.
 
+<!--more-->
+
 <style type="text/css"> 
   @import url('https://raw.githubusercontent.com/Caged/d3-tip/master/examples/example-styles.css');
   .square-grid {

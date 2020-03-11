@@ -223,7 +223,8 @@ img {
   margin: auto;
   height: auto;
   max-width: 90vw;
-  width: 100%;
+  max-width: 100%;
+  display: block;
 }
 
 img.img-overflow {

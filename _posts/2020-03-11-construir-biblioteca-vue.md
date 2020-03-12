@@ -3,16 +3,18 @@ layout: post
 title: Cómo utilizar un proyecto de Vue como biblioteca de componentes
 date: 2020-03-11
 author: Blanca López
-image: /assets/images/2020-03-11-construir-biblioteca-vue/image-20200311132557648.png
+image: https://dev-to-uploads.s3.amazonaws.com/i/q5f68cn0odv37e3zl7cd.png
 imageAltText: Vuejs componentes externos
 categories: frontend
 tags:
   [frontend, javascript, vue, library, webpack, vue-cli, vue-cli-service, build]
 ---
 
-<!-- # Como utilizar un proyecto de Vue como biblioteca de componentes -->
+<!-- # Como utilizar un proyecto de Vue como biblioteca de componentes -->
 
-Últimamente he estado utilizando Vuejs para diferentes proyectos y en ocasiones me he encontrado con la necesidad de reutilizar ciertos componentes en otros proyectos. ¿Cómo podemos utilizar estos componentes en una biblioteca que pueda ser utilizada por otros proyectos? Afortunadamente, las herramientas de Vue nos permiten configurar _bundles_ en forma de biblioteca para exportar este tipo de componentes.
+Últimamente he estado utilizando Vuejs para diferentes proyectos y en ocasiones me he encontrado con la necesidad de reutilizar ciertos componentes en otros proyectos.
+
+¿Cómo podemos utilizar estos componentes en una biblioteca que pueda ser utilizada por otros proyectos? Afortunadamente, las herramientas de Vue nos permiten configurar la construcción en forma de biblioteca para exportar este tipo de componentes.
 
 <!--more-->
 
@@ -57,7 +59,7 @@ export default {
 
 Este componente tiene como función solo desplegar la fecha actual, utilizando una dependencia externa como `moment.js`
 
-![image-20200311114641501](/assets/images/2020-03-11-construir-biblioteca-vue/image-20200311114641501.png)
+![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/iixh4lpv55y7yb2xgxsq.png)
 
 ## Construir como biblioteca
 
@@ -104,9 +106,9 @@ Para que otro proyecto pueda usar nuestra biblioteca construida, necesitamos dec
 
 ## Dependencias externas
 
-Ahora, si solo la construimos así sin más, la configuración nos hará incluir todas las dependencias y archivos importados dentro de nuestro _bundle_.
+Ahora, si solo la construimos así sin más, la configuración nos hará incluir todas las dependencias y archivos importados dentro de nuestro paquete.
 
-![image-20200311122506476](/assets/images/2020-03-11-construir-biblioteca-vue/image-20200311122506476.png)
+![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/fvg4918mvszxrw1cqk4j.png)
 
 Para evitar esto, debemos modificar la configuración de **webpack** a través del archivo `vue.config.js`. Este archivo, nos permite incluir plugins de Vue para desarrollo (por ejemplo, pre-procesadores de HTML como Pug, o de CSS como SASS) y **extender** la configuración actual de webpack.
 
@@ -119,7 +121,7 @@ module.exports = {
   /** chainWebpack permite extender la config actual de webpack **/
   chainWebpack: config => {
     if (process.env.VUE_CLI_BUILD_TARGET === "lib") {
-      /** Utilizamos solo esta configuración para el bundle de biblioteca */
+      /** Utilizamos solo esta configuración para el paquete de la biblioteca */
       config.externals({
         moment: "moment"
       });
@@ -128,9 +130,9 @@ module.exports = {
 };
 ```
 
-Al decirle que obtenga `moment` de dependencias externas, ya no lo incorporará en el bundle.
+Al decirle que obtenga `moment` de dependencias externas, ya no lo incorporará en el paquete.
 
-![image-20200311122758660](/assets/images/2020-03-11-construir-biblioteca-vue/image-20200311122758660.png)
+![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/9u6o0ffpmo20kv7besui.png)
 
 ## Utilizar en el proyecto de prueba
 
@@ -174,7 +176,7 @@ export default {
 </script>
 ```
 
-![image-20200311125120341](/assets/images/2020-03-11-construir-biblioteca-vue/image-20200311125120341.png)
+![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/9z33vig3eoe5gute9u54.png)
 
 ## ¿Qué pasa si mi componente usa Vuex store?
 
@@ -306,6 +308,6 @@ Al inicializar nuestra biblioteca como plugin, ya no es necesario hacer el impor
 
 Y _voilá_, ahora podemos hacer uso de ambos componentes dentro de `testapp` y utilizando la extensión de herramientas de Vue en el navegador podemos ver el estado del _store_.
 
-![image-20200311132557648](/assets/images/2020-03-11-construir-biblioteca-vue/image-20200311132557648.png)
+![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/ju1stwxi90choldr6v0v.png)
 
-![image-20200311132547718](/assets/images/2020-03-11-construir-biblioteca-vue/image-20200311132547718.png)
+![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/q5f68cn0odv37e3zl7cd.png)

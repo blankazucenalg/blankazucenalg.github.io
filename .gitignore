@@ -12,3 +12,4 @@ coverage/
 _site/
 vendor/
 .build/
+.vscode

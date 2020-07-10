@@ -1,0 +1,20 @@
+---
+layout: sidenav
+comments: true
+---
+
+<div class="post content-post">
+  <h1 class="post-title">{{ page.title }}</h1>
+  {% include post_header.html %}
+  <div class="post-categories">
+    <span>Etiquetas: </span>
+    {% if post %} {% assign tags = post.tags %} {% else %} {% assign tags =
+    page.tags %} {% endif %} {% for tag in tags %}
+    <a href="{{site.baseurl}}/tags/#{{tag|slugize}}">{{tag}}</a>
+    {% unless forloop.last %}&nbsp;{% endunless %} {% endfor %}
+  </div>
+  <div class="content">
+    {{ content }}
+  </div>
+  {% include disqus_comments.html %}
+</div>

@@ -1,88 +1,123 @@
 ---
-layout: default
+layout: navbar
 title: Resumé - Blanca Azucena López Garduño
 ---
 
 <div class="resume vertical-align height-100">
-  <div class="row">
-    <div class="col s3">
-      <img
-        class="responsive-img rounded"
-        alt="Blanca López"
-        src="https://avatars3.githubusercontent.com/u/6007352?s=460&v=4"
-      />
-    </div>
-    <div class="col s9">
-      <h1>
-        {{ site.data.resume.fullname }}
-      </h1>
-      <!-- contact card -->
-      <div>
-        <div class="row">
-          <div class="col s12">
-            <span class="fa fa-home"></span>
-            <address>{{site.data.resume.address}}</address>
-          </div>
-          <div class="col s12 m6">
-            <span class="fa fa-envelope-o"></span>
-            <a href="mailto:{{site.data.resume.email}}"
-              ><span class="email">{{site.data.resume.email}}</span></a
-            >
-          </div>
-          <div class="col s12 m6">
-            <span class="fa fa-linkedin"></span>
-            <a
-              href="https://www.linkedin.com/in/{{site.data.resume.linkedin}}"
-              target="_blank"
-              ><span class="linkedin">{{ site.data.resume.linkedin}}</span></a
-            >
-          </div>
-          <div class="col s12">
-            <span class="fa fa-comments"></span>
-            <span>{{ site.data.resume.languages }}</span>
-          </div>
-          <div class="col s12">
-            <span class="fa fa-university"></span>
-            <span>{{ site.data.resume.education }}</span>
+  <div class="container">
+    <div class="row">
+      <div class="col s3">
+        <img
+          class="responsive-img rounded"
+          alt="Blanca López"
+          src="https://avatars3.githubusercontent.com/u/6007352?s=460&v=4"
+        />
+      </div>
+      <div class="col s9">
+        <h1>
+          {{ site.data.resume.fullname }}
+        </h1>
+        <!-- contact card -->
+        <div>
+          <div class="row">
+            <div class="col s12">
+              <span class="fa fa-home"></span>
+              <address>{{site.data.resume.address}}</address>
+            </div>
+            <div class="col s12">
+              <span class="fa fa-envelope-o"></span>
+              <a href="mailto:{{site.data.resume.email}}"
+                ><span class="email">{{site.data.resume.email}}</span></a
+              >
+            </div>
+            <div class="col s12 m6">
+              <span class="fa fa-linkedin"></span>
+              <a
+                href="https://www.linkedin.com/in/{{site.data.resume.linkedin}}"
+                target="_blank"
+                ><span class="linkedin">{{ site.data.resume.linkedin}}</span></a
+              >
+            </div>
+            <div class="col s12 m6">
+              <span class="fa fa-github"></span>
+              <a
+                href="https://www.github.com/{{site.data.resume.github}}"
+                target="_blank"
+                ><span class="github">{{ site.data.resume.github}}</span></a
+              >
+            </div>
+            <div class="col s12">
+              <span class="fa fa-comments"></span>
+              <span>{{ site.data.resume.languages }}</span>
+            </div>
+            <div class="col s12">
+              <span class="fa fa-university"></span>
+              <span>{{ site.data.resume.education_resume }}</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="col s12">
-      <h2>About me</h2>
-      <p>
-        {{ site.data.resume.about_me }}
-      </p>
-      <h2>Experience</h2>
-      {% for job in site.data.resume.jobs %}
-      <div class="job-card">
-        <p class="caption mb-0">{{ job.from }} - {{ job.to }} ({{job.time}})</p>
-        <p class="job-title mt-0 mb-0">
-          <b>{{ job.name }}</b> - <i>{{ job.jobtitle }}</i>
+      <div class="col s12">
+        <h2>About me</h2>
+        <p>
+          {{ site.data.resume.about_me }}
         </p>
-        {% for paragraph in job.responsibilities %}
-        <p>{{ paragraph }}</p>
-        {% endfor %}
-        <ul class="dashed">
-          {% for tech in job.technologies %}
-          <li>{{ tech }}</li>
+        <h2>Education</h2>
+        {% for education in site.data.resume.education %}
+        <div class="education-card">
+          <p class="caption mb-0">
+            {{ education.from }} - {{ education.to }}
+          </p>
+          <p class="caption mb-0">
+            {{ education.level }}
+          </p>
+          <p class="section-title mt-0 mb-0">
+            <b>{{ education.name }}</b> - <i>{{ education.school }}</i>
+          </p>
+          {% for paragraph in education.description %}
+          <p>{{ paragraph }}</p>
           {% endfor %}
-        </ul>
-      </div>
-      {% endfor %}
+          <ul class="dashed">
+            {% for tech in education.technologies %}
+            <li>{{ tech }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endfor %}
 
-      <h2>Off-work</h2>
-      {% for job in site.data.resume.off_work %}
-      <div class="job-card">
-        <p class="caption mb-0">{{ job.type }} - {{ job.date }}</p>
-        <p class="job-title mt-0 mb-0">
-          <b>{{ job.name }}</b> - <i>{{ job.place }}</i>
-        </p>
-        {% for paragraph in job.info %}
-        <p>{{ paragraph }}</p>
+        <h2>Experience</h2>
+        {% for job in site.data.resume.jobs %}
+        <div class="job-card">
+          <p class="caption mb-0">
+            {{ job.from }} - {{ job.to }} ({{job.time}})
+          </p>
+          <p class="section-title mt-0 mb-0">
+            <b>{{ job.name }}</b> - <i>{{ job.jobtitle }}</i>
+          </p>
+          {% for paragraph in job.responsibilities %}
+          <p>{{ paragraph }}</p>
+          {% endfor %}
+          <ul class="dashed">
+            {% for tech in job.technologies %}
+            <li>{{ tech }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endfor %}
+
+        <h2>Off-work</h2>
+        {% for job in site.data.resume.off_work %}
+        <div class="job-card">
+          <p class="caption mb-0">{{ job.type }} - {{ job.date }}</p>
+          <p class="section-title mt-0 mb-0">
+            <b>{{ job.name }}</b> - <i>{{ job.place }}</i>
+          </p>
+          {% for paragraph in job.info %}
+          <p>{{ paragraph }}</p>
+          {% endfor %}
+        </div>
         {% endfor %}
       </div>
-      {% endfor %}
     </div>
   </div>
 </div>
@@ -92,8 +127,9 @@ title: Resumé - Blanca Azucena López Garduño
   }
 
   .resume p {
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-    font-size: 12pt;
+    font-family: "Karla", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    font-size: 1em;
   }
 
   .resume p.highlight {
@@ -132,8 +168,8 @@ title: Resumé - Blanca Azucena López Garduño
     margin-bottom: 2em;
   }
 
-  p.job-title,
-  .job-title {
+  p.section-title,
+  .section-title {
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
       sans-serif;
     font-size: 14pt;

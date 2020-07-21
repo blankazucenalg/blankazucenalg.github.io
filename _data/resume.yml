@@ -1,16 +1,26 @@
 fullname: Blanca Azucena López Garduño
-address: Ecatepec 55100, Estado de México, México
+address: Ciudad de México, México
 email: blankazucenalg@gmail.com
 linkedin: blankazucenalg
-languages: Spanish, English
-education: Computer Science Engineer, ESCOM, IPN (2011-2016)
+github: blankazucenalg
+languages: Spanish (native speaker), English (conversational level B2)
+education_resume: Computer Science Engineer, ESCOM, IPN (2011-2016)
 about_me: I fell in love with software development when I discovered that it could be used to solve problems that seemed impossible. I enjoy creating solutions that aim to improve people's lives, share ideas and learn from each experience, always trying to improve myself. I love music and I don't like horror movies.
+education:
+  - level: Bachelor degree
+    name: Computer Science and Engineering
+    school: ESCOM, Instituto Politécnico Nacional
+    from: Aug, 2011
+    to: Jul, 2016
+    description:
+      - I studied the Computer Systems Engineering degree, studying electives corresponding to web development, mobile development, evolutionary computation and artificial neural networks.
+      - Completion of the project "API for the Development of Recommendation Systems" as Terminal Work of the degree.
 jobs:
   - name: OS City
     jobtitle: Software Engineer
-    from: February 2019
+    from: January 2020
     to: Present
-    time: 8 months
+    time: 6 months
     responsibilities:
       - As a software engineer in OS City, I have helped to build the City Manager Platform that allows citizens and government employees to manage citizen reports and analyse that information to display interpretable results.
     technologies:
@@ -18,12 +28,13 @@ jobs:
       - JavaScript, R, Python v2.7
       - GCP, Firebase, CartoDB
       - Legacy code management
+      - Blockcerts implementations management and automatization
 
   - name: DATA FOUR
     jobtitle: Full-Stack Software Engineer
     from: October 2016
-    to: September 2019
-    time: 3 years
+    to: December 2019
+    time: 3 years, 2 months
     responsibilities:
       - As a full-stack software engineer I have developed several data management & data visualization platforms, along with animated storytellings for different clients.
       - Working with a multi-disciplinary team, I have been through the whole process from client's requirements gathering, backlog's issues organization, database administration, back-end and front-end development and finally deploying in servers, as well as being in touch with clients and managing the team.

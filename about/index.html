@@ -6,113 +6,89 @@ title: About me
 <div class="about vertical-align height-100 content-post">
   <div class="row">
     <div class="col s12">
-      <p class="highlight center">
+      <h1 class="highlight center">
         Acerca de mí
-      </p>
-      <img
-        class="responsive-img"
-        alt="Blanca López"
-        src="/assets/images/about_main.jpg"
-      />
+      </h1>
+      <img class="responsive-img" alt="Blanca Azucena López Garduño" src="/assets/images/about_main.jpg" />
+      <ul>
+        <li>Ingeniera de software radicando en México. </li>
+        <li>Puedes encontrarme en
+          <a href="https://www.linkedin.com/in/blankazucenalg/" target="_blank"
+            alt="LinkedIn de Blanca Azucena">LinkedIn</a></li>
+        <li><a href="https://github.com/blankazucenalg" alt="Perfil en GitHub" target="_blank">Desarrollo</a>
+          aplicaciones web orientadas a gestión y visualización de
+          información.</li>
+        <li>Principalmente utilizo tecnologías MEAN <em>full-stack</em>, aunque en ocasiones me ha tocado trabajar con
+          variedad de herramientas</li>
+        <li>Estudié Ingeniería en Sistemas Computacionales en el Instituto Politécnico Nacional</li>
+        <li>Me gusta mucho la <a href="https://www.last.fm/es/user/blankazucenalg" target="_blank"
+            alt="Last.fm">música</a> y <a href="https://blankazucenalg.deviantart.com/" alt="DeviantArt"
+            target="_blank">dibujar</a> en ocasiones.</li>
+        <li>También puedes encontrarme en <a href="https://twitter.com/blankazucenalg" alt="Twitter @blankazucenalg"
+            target="_blank">Twitter @blankazucenalg</a></li>
+      </ul>
     </div>
     <div class="col s12">
       <div class="center">
-        <p>
-          Orgullosamente mexicana. Estudié
-          <abbr title="Ingeniería en Sistemas Computacionales">ISC</abbr> en el
-          <abbr title="Instituto Politécnico Nacional">IPN</abbr>.
-        </p>
-        <p>
-          Actualmente trabajo como ingeniera de software en
-          <a href="https://os.city/" target="_blank">OS City</a>
-        </p>
-        <p>
-          Me gusta la música, la cocina, dibujar y hacer proyectos DIY. No me
-          gustan las películas de terror.
-        </p>
         <ul class="networks">
           <li class="service email">
-            <a
-              class="icon bP"
-              href="mailto:hello@blankazucenalg.com"
-              target="_blank"
-              title="Email"
-            >
+            <a class="icon bP" href="mailto:hello@blankazucenalg.com" target="_blank" title="Email">
               <span class="fa fa-envelope-o"></span>
             </a>
           </li>
           <li class="service github">
-            <a
-              class="icon bP"
-              href="https://github.com/blankazucenalg"
-              target="_blank"
-              title="GitHub"
-            >
+            <a class="icon bP" href="https://github.com/blankazucenalg" target="_blank" title="GitHub">
               <span class="fa fa-github"></span>
             </a>
           </li>
           <li class="service twitter">
-            <a
-              class="icon bP"
-              href="https://twitter.com/blankazucenalg"
-              target="_blank"
-              title="Twitter"
-            >
+            <a class="icon bP" href="https://twitter.com/blankazucenalg" target="_blank" title="Twitter">
               <span class="fa fa-twitter"></span>
             </a>
           </li>
           <li class="service linkedin">
-            <a
-              class="icon bP"
-              href="https://www.linkedin.com/in/blankazucenalg/"
-              target="_blank"
-              title="LinkedIn"
-            >
+            <a class="icon bP" href="https://www.linkedin.com/in/blankazucenalg/" target="_blank" title="LinkedIn">
               <span class="fa fa-linkedin"></span>
             </a>
           </li>
           <li class="service instagram">
-            <a
-              class="icon bP"
-              href="https://www.instagram.com/blankazucenalg/"
-              target="_blank"
-              title="instagram"
-            >
+            <a class="icon bP" href="https://www.instagram.com/blankazucenalg/" target="_blank" title="instagram">
               <span class="fa fa-instagram"></span>
             </a>
           </li>
           <li class="service deviantart">
-            <a
-              class="icon bP"
-              href="https://blankazucenalg.deviantart.com/"
-              target="_blank"
-              title="deviantart"
-            >
+            <a class="icon bP" href="https://blankazucenalg.deviantart.com/" target="_blank" title="deviantart">
               <span class="fa fa-deviantart"></span>
             </a>
           </li>
           <li class="service lastfm">
-            <a
-              class="icon bP"
-              href="https://www.last.fm/es/user/blankazucenalg"
-              target="_blank"
-              title="Lastfm"
-            >
+            <a class="icon bP" href="https://www.last.fm/es/user/blankazucenalg" target="_blank" title="Lastfm">
               <span class="fa fa-lastfm"></span>
             </a>
           </li>
           <li class="service spotify">
-            <a
-              class="icon bP"
-              href="https://open.spotify.com/user/12126847988"
-              target="_blank"
-              title="Spotify"
-            >
+            <a class="icon bP" href="https://open.spotify.com/user/12126847988" target="_blank" title="Spotify">
               <span class="fa fa-spotify"></span>
             </a>
           </li>
         </ul>
       </div>
+    </div>
+  </div>
+</div>
+<div class="vertical-align projects container-fluid dark">
+  <div class="container">
+    <h2 class="center">Proyectos</h2>
+    <div class="row">
+      {% for project in site.data.projects %}
+      <div class="col s12 m6 l4">
+        <a href="{{ project.link }}" target="_blank">
+          <picture>
+            <img src="{{ project.img }}" alt="{{ project.alt }}">
+          </picture>
+        </a>
+      </div>
+      {% endfor %}
     </div>
   </div>
 </div>

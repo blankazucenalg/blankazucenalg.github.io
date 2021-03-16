@@ -6,20 +6,27 @@ code {
   color: #db5523;
   font-size: 0.9em;
 }
+
 pre,
 pre code {
   background-color: #282828;
   color: #fafafa;
-  white-space: pre-wrap; /* css-3 */
-  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
-  white-space: -pre-wrap; /* Opera 4-6 */
-  white-space: -o-pre-wrap; /* Opera 7 */
-  word-wrap: break-word; /* Internet Explorer 5.5+ */
+  white-space: pre-wrap;
+  /* css-3 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */
 }
 
 pre.highlight code .kd {
   color: deepskyblue;
 }
+
 pre.highlight code .kc {
   color: #955ccc;
 }
@@ -27,6 +34,7 @@ pre.highlight code .kc {
 pre.highlight code .nx {
   color: yellowgreen;
 }
+
 pre.highlight code .na {
   color: yellowgreen;
 }
@@ -34,9 +42,11 @@ pre.highlight code .na {
 pre.highlight code .s1 {
   color: goldenrod;
 }
+
 pre.highlight code .s2 {
   color: goldenrod;
 }
+
 pre.highlight code .s {
   color: goldenrod;
 }
@@ -44,15 +54,19 @@ pre.highlight code .s {
 pre.highlight code .o {
   color: deeppink;
 }
+
 pre.highlight code .k {
   color: deeppink;
 }
+
 pre.highlight code .c {
   color: grey;
 }
+
 pre.highlight code .c1 {
   color: grey;
 }
+
 pre.highlight code .cm {
   color: grey;
 }

@@ -1,13 +1,39 @@
-
-- link: https://sindis.conapred.org.mx
-  img: /assets/images/conapred-sindis.png
-  alt: Sistema Nacional de Información sobre Discriminación
+- link: https://demo.os.city
+  img: /assets/images/projects/oscity-demosburg.png
+  alt: "OS City. City Manager Platform. Demosburg"
+  description: "Plataforma de gestión ciudadana e identidad digital con tecnologías Blockchain."
 - link: 'http://datos.comovamosnl.org/'
-  img: '/assets/images/Share-CVNL.png'
+  img: '/assets/images/projects/cvnl-asivamos.png'
   alt: 'Cómo Vamos Nuevo León. Encuesta de Percepción Cuidadana "Así vamos" e Indicadores explorables'
+  description: 'Plataforma de gestión y exploración de información sobre la encuesta de percepción ciudadana "Así Vamos" e indicadores relevantes.'
+- link: https://sindis.conapred.org.mx
+  img: /assets/images/projects/conapred-sindis.png
+  alt: Sistema Nacional de Información sobre Discriminación
+  description: Sistema Nacional de Información sobre Discriminación. Exploración de la ENADIS y ENDOSIG además de gestión de contenido.
 - link: http://oxfam-indigenas-y-afrodescendientes.data4.mx/#/
-  img: /assets/images/oxfam-afrodescendientes.png
+  img: /assets/images/projects/oxfam-afrodescendientes.png
   alt: "Las poblaciones afrodescendientes e indígenas en México: Desigualdad económica y el racismo que no queremos ver"
+  description: "Las poblaciones afrodescendientes e indígenas en México: Desigualdad económica y el racismo que no queremos ver"
+- link: http://oxfam-agua.data4.mx/#/
+  img: /assets/images/projects/oxfam-agua.png
+  alt: "La desigualdad en el acceso al agua en México"
+  description: "La desigualdad de ingreso en nuestro país se traduce en desigualdad de acceso a un suministro constante y de buena calidad al agua."
+- link: http://oxfam-mujeres.data4.mx/#/
+  img: /assets/images/projects/oxfam-mujeres.png
+  alt: "Violencia contra las mujeres: una biografía"
+  description: A lo largo de toda su vida, las mujeres son víctimas de un tipo de violencia distinta.
+- link: http://oxfam-desastres.data4.mx/#/
+  img: /assets/images/projects/oxfam-desastres.png
+  alt: "Desastres en México: la desigualdad en los costos y los apoyos"
+  description: "Desastres en México: la desigualdad en los costos y los apoyos para reconstrucción en los lugares más pobres y marginados del país."
+- link: http://oxfam-movilidad.data4.mx/
+  img: /assets/images/projects/oxfam-movilidad.png
+  alt: "Movilidad social. Conoce tu privilegio."
+  description: "¿Te has puesto a pensar en cómo tu color de piel, tu sexo o la educación de tus papás influyen en tu experiencia de vida?"
+- link: http://oxfam-movilidad.data4.mx/
+  img: /assets/images/projects/oxfam-movilidad.png
+  alt: "Movilidad social. Conoce tu privilegio."
+  description: "¿Te has puesto a pensar en cómo tu color de piel, tu sexo o la educación de tus papás influyen en tu experiencia de vida?"
 # - link: https://matrimonio-adolescente.gire.org.mx/#/
 #   img: ''
 #   alt: 'Matrimonio adolescente'

@@ -41,6 +41,11 @@ title: About me
               <span class="fa fa-github"></span>
             </a>
           </li>
+          <li class="service gitlab">
+            <a class="icon bP" href="https://gitlab.com/blankazucenalg" target="_blank" title="GitLab">
+              <span class="fa fa-gitlab"></span>
+            </a>
+          </li>
           <li class="service twitter">
             <a class="icon bP" href="https://twitter.com/blankazucenalg" target="_blank" title="Twitter">
               <span class="fa fa-twitter"></span>
@@ -81,12 +86,18 @@ title: About me
     <h2 class="center">Proyectos</h2>
     <div class="row">
       {% for project in site.data.projects %}
-      <div class="col s12 m6 l4">
-        <a href="{{ project.link }}" target="_blank">
-          <picture>
-            <img src="{{ project.img }}" alt="{{ project.alt }}">
-          </picture>
-        </a>
+      <div class="col s12 m6 l4 project-item">
+        <picture>
+          <img src="{{ project.img }}" alt="{{ project.alt }}">
+        </picture>
+        <div class="col s12 picture-caption">
+          <div class="inner">
+            <p>{{ project.description | project.alt }}</p>
+            <a href="{{ project.link }}" target="_blank">
+              <button class="waves-effect waves-light btn outline">Ver proyecto</button>
+            </a>
+          </div>
+        </div>
       </div>
       {% endfor %}
     </div>

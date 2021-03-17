@@ -2,8 +2,8 @@
   img: /assets/images/projects/oscity-demosburg.png
   alt: "OS City. City Manager Platform. Demosburg"
   description: "Plataforma de gestión ciudadana e identidad digital con tecnologías Blockchain."
-- link: 'http://datos.comovamosnl.org/'
-  img: '/assets/images/projects/cvnl-asivamos.png'
+- link: "http://datos.comovamosnl.org/"
+  img: "/assets/images/projects/cvnl-asivamos.png"
   alt: 'Cómo Vamos Nuevo León. Encuesta de Percepción Cuidadana "Así vamos" e Indicadores explorables'
   description: 'Plataforma de gestión y exploración de información sobre la encuesta de percepción ciudadana "Así Vamos" e indicadores relevantes.'
 - link: https://sindis.conapred.org.mx
@@ -26,14 +26,11 @@
   img: /assets/images/projects/oxfam-desastres.png
   alt: "Desastres en México: la desigualdad en los costos y los apoyos"
   description: "Desastres en México: la desigualdad en los costos y los apoyos para reconstrucción en los lugares más pobres y marginados del país."
+- link: https://github.com/dboxjs
+  img: /assets/images/projects/dboxjs.png
+  alt: "Dboxjs"
+  description: "Una biblioteca open source para generar gráficas prediseñadas con d3.js"
 - link: http://oxfam-movilidad.data4.mx/
   img: /assets/images/projects/oxfam-movilidad.png
   alt: "Movilidad social. Conoce tu privilegio."
-  description: "¿Te has puesto a pensar en cómo tu color de piel, tu sexo o la educación de tus papás influyen en tu experiencia de vida?"
-- link: http://oxfam-movilidad.data4.mx/
-  img: /assets/images/projects/oxfam-movilidad.png
-  alt: "Movilidad social. Conoce tu privilegio."
-  description: "¿Te has puesto a pensar en cómo tu color de piel, tu sexo o la educación de tus papás influyen en tu experiencia de vida?"
-# - link: https://matrimonio-adolescente.gire.org.mx/#/
-#   img: ''
-#   alt: 'Matrimonio adolescente'
+  description: "¿Te has puesto a pensar en cómo tu color de piel, tu sexo o la educación de tus padres influyen en tu experiencia de vida? Una exploración a la movilidad social en México."
